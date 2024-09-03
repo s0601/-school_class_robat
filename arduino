@@ -1,0 +1,25 @@
+#include <Servo.h>
+
+Servo servo1;  // 创建第一个伺服对象
+Servo servo2;  // 创建第二个伺服对象
+Servo servo3;  // 创建第三个伺服对象
+
+void setup() {
+  // 将伺服对象附加到数字引脚
+  servo1.attach(9);
+  servo2.attach(10);
+  servo3.attach(11);
+}
+
+void loop() {
+  // 将伺服转动到不同的角度
+  servo1.write(0);   // 0度
+  servo2.write(45);  // 45度
+  servo3.write(90);  // 90度
+  delay(1000);       // 等待1秒
+
+  servo1.write(90);  // 90度
+  servo2.write(135); // 135度
+  servo3.write(180); // 180度
+  delay(1000);       // 等待1秒
+}
